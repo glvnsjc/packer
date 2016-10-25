@@ -30,7 +30,7 @@ deps:
 	go get github.com/mitchellh/gox
 	go get golang.org/x/tools/cmd/stringer
 	go get github.com/kardianos/govendor
-	govendor sync
+	govendor sync -insecure
 
 dev: deps ## Build and install a development build
 	@grep 'const VersionPrerelease = ""' version/version.go > /dev/null ; if [ $$? -eq 0 ]; then \
